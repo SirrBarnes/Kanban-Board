@@ -17,6 +17,7 @@ const Board = () => {
   const [loginCheck, setLoginCheck] = useState(false);
 
   const checkLogin = () => {
+    console.log(auth.loggedIn());
     if(auth.loggedIn()) {
       setLoginCheck(true);
     }
@@ -43,6 +44,7 @@ const Board = () => {
   }
 
   useLayoutEffect(() => {
+    console.log("I'm here!!");
     checkLogin();
   }, []);
 

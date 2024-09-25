@@ -20,7 +20,7 @@ class AuthService {
 
       console.log(decoded);
 
-      if(decoded?.exp && decoded?.exp < Date.now()) {
+      if(decoded?.exp && decoded?.exp < Date.now() / 1000) {
         return true;
       }
     } catch (error) {
